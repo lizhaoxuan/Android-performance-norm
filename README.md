@@ -331,12 +331,15 @@
 		itmap output = Bitmap.createBitmap(scaledSrcBmp.getWidth(),
 		scaledSrcBmp.getHeight(),Config.ARGB_8888);
 		
-		ARGB_8888		32Bit		(这是一种高质量的图片格式，电脑上普通采用的格式。它也是Android手机上一个BitMap的)
-		RGB_565			16Bit		(对于没有透明和半透明颜色的图片来说，该格式的图片能够达到比较的呈现效果，相对于ARGB_8888来说也能减少一半的内存开销。因此它是一个不错的选择。另外我们通过android.content.res.Resources来取得一个张图片时，它也是以该格式来构建BitMap的 
+* ARGB_8888		32Bit		(这是一种高质量的图片格式，电脑上普通采用的格式。它也是Android手机上一个BitMap的)
+	
+* RGB_565			16Bit		(对于没有透明和半透明颜色的图片来说，该格式的图片能够达到比较的呈现效果，相对于ARGB_8888来说也能减少一半的内存开销。因此它是一个不错的选择。另外我们通过android.content.res.Resources来取得一个张图片时，它也是以该格式来构建BitMap的 
 从 Android4.0 开始，该选项无效。即使设置为该值，系统任然会采用  ARGB_8888 来构造图片)
-		ARGB_4444		16Bit		(这种格式的图片，看起来质量太差，已经不推荐使用)
-		ALPHA_8			8Bi  		(此时图片只有alpha值，没有RGB值， )
-	t
+	
+* ARGB_4444		16Bit		(这种格式的图片，看起来质量太差，已经不推荐使用)
+	
+* ALPHA_8		8Bit  		(此时图片只有alpha值，没有RGB值， )
+	
 		
 			
 		
