@@ -275,12 +275,6 @@
 			value = ob.getVlaue();
 		}
 
-- #####及时释放不用的对象
-
-		a = new Object();
-		当a不为空时，应改写为:
-		a = null;
-		a = new Object();
 - #####不在使用的变量，手动置为null
 		通常对于对象成员如此使用，局部变量不需要
 		this.object = null；
@@ -302,12 +296,6 @@
 
 		handler.sendMessage(handler.obtainMessage(0, object)); 
    
-- #####通知栏notification缓存
-
-		最简单的缓存：
-		Map<String, Notification> notificationMap = new HashMap<String, Notification>();
-
-		如果 notificationMap中不存在,则新建notification并且put into map.
 - #####尽量使用对象池机制
 
 		对象池机制可以有效避免内存抖动提升性能
@@ -381,7 +369,7 @@
   	 		android:drawableTop="@drawable/icon"/>  //将图片置于上方  
   	
   	 		
-- #####默认不会显示的布局使用 viewstub 标签
+- #####默认不会显示的布局使用 viewstub 标签（但是并没有发现使用viewstub和GONE在效率上的区别，还是更倾向于使用GONE）
 
 		<ViewStub
 			android:id="@+id/network_error_layout"
